@@ -1,0 +1,91 @@
+.page-content {
+	background: $white;
+	margin: 0 auto;
+	max-width: 500px;
+	min-height: 100%;
+	width: 100%;
+	@include flexbox;
+	@include flex-direction(column);
+	@include flex-wrap(wrap);
+}
+
+
+main {
+	background: $white;
+	margin: 0 auto;
+	max-width: 500px;
+	min-height: 100%;
+	width: 100%;
+	@include flexbox;
+	@include flex-direction(column);
+	@include flex-wrap(wrap);
+
+	nav {
+		border: 1px solid $off-black;
+		@include flexbox;
+		@include flex(1 0 100%);
+
+
+		ul {
+			@include flexbox;
+			@include flex-direction(row);
+			@include flex-wrap(wrap);
+		}
+
+
+		li {
+			@include flex(1 0 50%);
+			@include flexbox;
+			
+
+		}
+
+	}
+	
+	a {
+		@include flexbox;
+		@include flex-direction(column);
+		@include flex-wrap(wrap);
+		@include flex(1 0 100%);
+		
+		.food-icon {
+			@include flexbox;
+			@include align-item(center);
+			@include justify(center);
+			@include flex(1 0 auto);
+		}
+
+		.food-label {
+			@include flex(0 1 auto);
+		}
+
+	}
+}
+
+.footer-heading {
+	border: 2px solid $off-black;
+	border-bottom: none;
+	border-top: none;
+	@include flex(0 1 auto);
+
+	h3 {
+		font-size: 1rem;
+		height: 100%;
+		margin: 0;
+		padding: .5rem;
+		text-align: center;
+		width: 100%;
+	}
+
+}
+
+body {
+	background: $gray-color;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+html, body {
+    height: 100%;
+}

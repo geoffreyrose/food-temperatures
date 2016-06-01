@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Food Temperatures</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<!--[if IE]>
+		<script src="assets/js/lib/respond.js"></script>
+		<script src="assets/js/lib/html5.js"></script>
+		<script src="assets/js/lib/rem.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/css/iestyles.css" />
+	<![endif]-->
+</head>
+<body>
+	<main>
+		<nav>
+			<ul>
+				<li>
+					<a href="#!/beef">
+						<span class="food-icon">[ICON HERE]</span>
+						<span class="food-label">Beef</span>
+					</a>
+				</li>
+				<li>
+					<a href="#!/pork">
+						<span class="food-icon">[ICON HERE]</span>
+						<span class="food-label">Pork</span>
+					</a>
+				</li>
+				<li>
+					<a href="#!/chicken">
+						<span class="food-icon">[ICON HERE]</span>
+						<span class="food-label">Chicken</span>
+					</a>
+				</li>
+				<li>
+					<a href="#!/turkey">
+						<span class="food-icon">[ICON HERE]</span>
+						<span class="food-label">Turkey</span>
+					</a>
+				</li>
+				<li>
+					<a href="#!/lamb">
+						<span class="food-icon">[ICON HERE]</span>
+						<span class="food-label">Lamb</span>
+					</a>
+				</li>
+				<li>
+					<a href="#!/fish">
+						<span class="food-icon">[ICON HERE]</span>
+						<span class="food-label">Fish</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<footer class="footer-heading">
+			<h3>What Are You Cooking?</h3>
+		</footer>
+
+	</main>
+	<div class="page-content" ng-view></div>
+
+	<!-- In production use: <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="app.js"></script>
+	<script src="views/home/home.js"></script>
+	<script src="views/foods/food.js"></script>
+</body>
+</html>

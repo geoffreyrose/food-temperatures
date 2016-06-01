@@ -1,0 +1,30 @@
+$primary-color: #C02133;
+$primary-color-shade: darken($primary-color, 15%);
+$primary-color-tint: lighten($primary-color, 15%);
+
+$secondary-color: #1E2B5C;
+$secondary-color-shade: darken($secondary-color, 15%);
+$secondary-color-tint: lighten($secondary-color, 15%);
+
+$tertiary-color: #FF740A;
+$tertiary-color-shade: darken($tertiary-color, 15%);
+$tertiary-color-tint: lighten($tertiary-color, 15%);
+
+$gray-color: #eee;
+$gray-color-shade: darken($gray-color, 10%);
+$gray-color-tint: lighten($gray-color, 5%);
+
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
+$header-font-color: #ccc;
+$button-color: #27AC27;
+$white: #fff;
+$off-white: #eee;
+$black: #151515;
+$off-black: #999;
+
+$font-color: #333;
+$font-color-shade: darken($font-color, 10%);
+$font-color-tint: lighten($font-color, 10%);
