@@ -7,5 +7,12 @@
 </div>
 
 <footer class="food-footer">
-	<a class="back-button" ng-click="showPageToggle()">Back</a> <h3 class="text-center">Cooking Temp</h3>
+	<a class="back-button" ng-click="showPageToggle()">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>
+	</a>
+	<h3 class="text-center">Temperature</h3>
+	<div class="switch">
+		<input checked id="namehere" type="checkbox" name="namehere" />
+		<span class="right">&#176;F</span><label for="namehere"></label><span class="left">&#176;C</span>
+	</div>
 </footer>

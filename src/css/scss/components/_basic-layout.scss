@@ -154,11 +154,24 @@ html, body {
 		float: left;
 		left: .5rem;
 		position: absolute;
+		top: .75rem;
 	}
+	
+	.switch {
+		position: absolute;
+		right: .5rem;
+		top: .75rem;
+	}
+
 
 	h3 {
 		font-size: 1rem;
 		margin: 0;
 		text-align: center;
+	}
+
+	i {
+		font-size: 1.125rem;
+		line-height: 1rem;
 	}
 }

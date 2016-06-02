@@ -1,0 +1,57 @@
+.switch {
+	cursor: pointer;
+	padding: 0 1.125rem;
+	position: relative;
+	input {
+		display: none;
+		&:checked {
+			~ label {
+				background: $info-color;
+				&:before {
+					background: #fff;	
+					left: 1.1em;
+				}
+			}
+		}
+	}
+
+	label {
+		background: $success-color;
+		//border: 1px solid #444;
+		height: 1.2em;
+		width: 2.2em;
+		display: block;
+		position: relative;
+		@include single-transition();
+		border-radius: 100em;
+
+		&:before {
+			content: '';
+			@include single-transition;
+			background: #fff;
+			height: 1em;
+			width: 1em;
+			display: block;
+			position: absolute;
+			top: .1em;
+			left: .1em;
+			border-radius: 100%;
+			box-shadow: 0 0 .125em #bbb;
+		}	
+	}
+
+	span {
+		color: $white;
+		font-size: .75rem;
+		position: absolute;
+		top: 0;
+
+		&.right {
+			right: 0;
+		}
+
+		&.left {
+			left: 0;
+		}
+	}
+}
