@@ -2,11 +2,34 @@
 	background: $white;
 	margin: 0 auto;
 	max-width: 500px;
-	min-height: 100%;
+	height: 100%;
+	position: absolute;
+	right: -100%;
+	top: 0;
 	width: 100%;
+	
 	@include flexbox;
 	@include flex-direction(column);
 	@include flex-wrap(wrap);
+	@include flex(1 1 100%);
+	@include single-transition;
+
+	&.page-open {
+		right: 0;
+	}
+
+	&.page-closed {
+		right: -100%;	
+	}
+
+	> div {
+		min-height: 100%;
+
+		@include flexbox;
+		@include flex-direction(column);
+		@include flex-wrap(wrap);
+		@include single-transition;
+	}
 }
 
 
@@ -15,13 +38,15 @@ main {
 	margin: 0 auto;
 	max-width: 500px;
 	min-height: 100%;
+	position: relative;
+	overflow: hidden;
 	width: 100%;
 	@include flexbox;
 	@include flex-direction(column);
 	@include flex-wrap(wrap);
 
 	nav {
-		border: 1px solid $off-black;
+		
 		@include flexbox;
 		@include flex(1 0 100%);
 
@@ -63,14 +88,15 @@ main {
 }
 
 .footer-heading {
+	background: #262626;
 	border: 2px solid $off-black;
 	border-bottom: none;
 	border-top: none;
+	color: #fff;
 	@include flex(0 1 auto);
 
 	h3 {
 		font-size: 1rem;
-		height: 100%;
 		margin: 0;
 		padding: .5rem;
 		text-align: center;
@@ -88,4 +114,51 @@ body {
 
 html, body {
     height: 100%;
+}
+
+
+.food-header {
+	background: #262626;
+	color: #fff;
+	padding: .5rem;
+	text-align: center;
+	@include flex(0 1 auto);
+
+	h3 {
+		font-size: 1rem;
+		margin: 0;
+		
+		text-align: center;
+	}
+}
+
+.food-content {
+	@include flex(1 0 100%);
+}
+
+.food-footer {
+	background: #262626;
+	color: #fff;
+	font-size: 1rem;
+	margin: 0;
+	padding: .5rem;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+	@include flex(0 1 auto);
+
+	.back-button {
+		color: #fff;
+		cursor: pointer;
+		float: left;
+		left: .5rem;
+		position: absolute;
+	}
+
+	h3 {
+		font-size: 1rem;
+		margin: 0;
+		text-align: center;
+	}
 }

@@ -1,18 +1,8 @@
-'use strict';
+var myApp = angular.module('myApp', ['ui.router']);
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.home',
-  'myApp.beef',
-  'myApp.pork',
-  'myApp.chicken',
-  'myApp.turkey',
-  'myApp.lamb',
-  'myApp.fish'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
-
-  $routeProvider.otherwise({redirectTo: '/'});
-}]);
+myApp.controller('pageToggleCtrl', function ($scope) {
+	$scope.showPage = false;
+	$scope.showPageToggle = function() {
+	  $scope.showPage = !$scope.showPage;
+	}  
+});

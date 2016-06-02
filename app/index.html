@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<html lang="en" ng-app="myApp" class="no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,41 +14,41 @@
 	<![endif]-->
 </head>
 <body>
-	<main>
+	<main ng-controller="pageToggleCtrl">
 		<nav>
 			<ul>
 				<li>
-					<a href="#!/beef">
+					<a ui-sref="beef" ng-click="showPageToggle()">
 						<span class="food-icon">[ICON HERE]</span>
 						<span class="food-label">Beef</span>
 					</a>
 				</li>
 				<li>
-					<a href="#!/pork">
+					<a ui-sref="pork" ng-click="showPageToggle()">
 						<span class="food-icon">[ICON HERE]</span>
 						<span class="food-label">Pork</span>
 					</a>
 				</li>
 				<li>
-					<a href="#!/chicken">
+					<a ui-sref="chicken" ng-click="showPageToggle()">
 						<span class="food-icon">[ICON HERE]</span>
 						<span class="food-label">Chicken</span>
 					</a>
 				</li>
 				<li>
-					<a href="#!/turkey">
+					<a ui-sref="turkey" ng-click="showPageToggle()">
 						<span class="food-icon">[ICON HERE]</span>
 						<span class="food-label">Turkey</span>
 					</a>
 				</li>
 				<li>
-					<a href="#!/lamb">
+					<a ui-sref="lamb" ng-click="showPageToggle()">
 						<span class="food-icon">[ICON HERE]</span>
 						<span class="food-label">Lamb</span>
 					</a>
 				</li>
 				<li>
-					<a href="#!/fish">
+					<a ui-sref="fish" ng-click="showPageToggle()">
 						<span class="food-icon">[ICON HERE]</span>
 						<span class="food-label">Fish</span>
 					</a>
@@ -61,15 +58,15 @@
 		<footer class="footer-heading">
 			<h3>What Are You Cooking?</h3>
 		</footer>
-
+		<div ng-class="{ 'page-open' : showPage, 'page-closed' : !showPage }" class="page-content">
+			<div ui-view></div>
+		</div>
 	</main>
-	<div class="page-content" ng-view></div>
 
 	<!-- In production use: <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> -->
 	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="app.js"></script>
-	<script src="views/home/home.js"></script>
-	<script src="views/foods/food.js"></script>
+	<script src="states.js"></script>
 </body>
 </html>
