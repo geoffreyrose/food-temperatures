@@ -25,11 +25,14 @@ nav {
 	}
 
 	.food-label {
-
+		color: $black;
+		font-weight: bold;
+		margin-bottom: 1rem;
 	}
 
 	.food-icon {
-
+		color: $black;
+		font-size: 3.5rem;
 	}
 
 }

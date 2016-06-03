@@ -1,0 +1,51 @@
+	/*
+	Flaticon icon font: Flaticon
+	Creation date: 03/06/2016 10:31
+	*/
+
+	@font-face {
+		font-family: "Flaticon";
+		src: url("../fonts/animals/Flaticon.eot");
+		src: url("../fonts/animals/Flaticon.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/animals/Flaticon.woff") format("woff"),
+		url("../fonts/animals/Flaticon.ttf") format("truetype"),
+		url("../fonts/animals/Flaticon.svg#Flaticon") format("svg");
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		@font-face {
+			font-family: "Flaticon";
+			src: url("./Flaticon.svg#Flaticon") format("svg");
+		}
+	}
+
+	.fi:before{
+		display: inline-block;
+		font-family: "Flaticon";
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		line-height: 1;
+		text-decoration: inherit;
+		text-rendering: optimizeLegibility;
+		text-transform: none;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-smoothing: antialiased;
+	}
+
+	.fi-chicken:before { content: "\f100"; }
+	.fi-cow:before { content: "\f101"; }
+	.fi-fish:before { content: "\f102"; }
+	.fi-pig:before { content: "\f103"; }
+	.fi-lamb:before { content: "\f104"; }
+	.fi-turkey:before { content: "\f105"; }
+	
+	$font-Flaticon-chicken-looking-right: "\f100";
+	$font-Flaticon-cow-silhouette: "\f101";
+	$font-Flaticon-draw: "\f102";
+	$font-Flaticon-pig-with-round-tail: "\f103";
+	$font-Flaticon-sheep-with-wool: "\f104";
+	$font-Flaticon-turkey-facing-right: "\f105";

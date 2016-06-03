@@ -3,7 +3,22 @@
 </header>
 
 <div class="food-content">
-	food content
+	<span class="food-icon"><i class="{{ food.icon }}"></i></span>
+	<div class="food-states">
+		<div class="food-state" ng-repeat="state in food.states">
+			<div class="food-state-label">
+				{{ state.label }}
+			</div>
+			<div class="food-state-temperatures" ng-repeat="temperature in state.temperatures">
+				<div ng-class="{ 'hide' : temperatureType, 'show' : !temperatureType}">
+					{{ temperature.fahrenheit }}
+				</div>
+				<div ng-class="{ 'show' : temperatureType, 'hide' : !temperatureType}">
+					{{ temperature.celsius }}
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <footer class="food-footer">
@@ -12,7 +27,8 @@
 	</a>
 	<h3 class="text-center">Temperature</h3>
 	<div class="switch">
-		<input checked id="namehere" type="checkbox" name="namehere" />
-		<span class="right">&#176;F</span><label for="namehere"></label><span class="left">&#176;C</span>
+		<input ng-if="!temperatureType" checked id="namehere" type="checkbox" name="namehere" />
+		<input ng-if="temperatureType" id="namehere" type="checkbox" name="namehere" />
+		<span class="right">&#176;F</span><label ng-click="temperatureTypeToggle()" for="namehere"></label><span class="left">&#176;C</span>
 	</div>
 </footer>

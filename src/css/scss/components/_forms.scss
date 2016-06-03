@@ -4,7 +4,7 @@
 	position: relative;
 	input {
 		display: none;
-		&:checked {
+		&[checked] {
 			~ label {
 				background: $info-color;
 				&:before {

@@ -133,7 +133,30 @@ html, body {
 }
 
 .food-content {
+	@include flexbox;
+	@include flex-direction(column);
+	@include flex-wrap(wrap);
 	@include flex(1 0 100%);
+
+	.food-icon {
+		display: block;
+		font-size: 7rem;
+		padding: 1rem 0; 
+		text-align: center;
+		
+		@include flexbox;
+		@include align-item(center);
+		@include justify(center);
+		@include flex(1 0 100%);
+
+		i {
+
+		}
+	}
+
+	.food-states {
+		@include flex(0 1 auto);
+	}
 }
 
 .food-footer {
@@ -174,4 +197,20 @@ html, body {
 		font-size: 1.125rem;
 		line-height: 1rem;
 	}
+}
+
+.food-state {
+	border-top: 1px solid $off-black;
+	float: left;
+	padding: .5rem;
+	width: 100%;
+
+	.food-state-label {
+		float: left;
+
+	}
+	
+	.food-state-temperatures {
+		float: right;
+	}	
 }
