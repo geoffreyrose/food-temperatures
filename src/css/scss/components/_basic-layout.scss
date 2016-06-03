@@ -1,3 +1,5 @@
+body {
+}
 .page-content {
 	background: $white;
 	margin: 0 auto;
@@ -45,6 +47,14 @@ main {
 	@include flex-direction(column);
 	@include flex-wrap(wrap);
 
+	&:before{
+	    display: block;
+	    content: '';
+	    height: 20px;
+	    top: 0;
+	    background: $black;
+	}
+
 	nav {
 		
 		@include flexbox;
@@ -88,7 +98,7 @@ main {
 }
 
 .footer-heading {
-	background: #262626;
+	background: $black;
 	border: 2px solid $off-black;
 	border-bottom: none;
 	border-top: none;
@@ -118,11 +128,19 @@ html, body {
 
 
 .food-header {
-	background: #262626;
+	background: $black;
 	color: #fff;
 	padding: .5rem;
 	text-align: center;
 	@include flex(0 1 auto);
+
+	&:before{
+	    display: block;
+	    content: '';
+	    height: 20px;
+	    top: 0;
+	    background: $black;
+	}
 
 	h3 {
 		font-size: 1rem;
@@ -160,7 +178,7 @@ html, body {
 }
 
 .food-footer {
-	background: #262626;
+	background: $black;
 	color: #fff;
 	font-size: 1rem;
 	margin: 0;
