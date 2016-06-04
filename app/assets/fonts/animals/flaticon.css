@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 03/06/2016 10:31
+  	Creation date: 04/06/2016 08:13
   	*/
 
 @font-face {
@@ -34,4 +34,5 @@ margin-left: 20px;
 .flaticon-draw:before { content: "\f102"; }
 .flaticon-pig-with-round-tail:before { content: "\f103"; }
 .flaticon-sheep-with-wool:before { content: "\f104"; }
-.flaticon-turkey-facing-right:before { content: "\f105"; }
+.flaticon-thermometer:before { content: "\f105"; }
+.flaticon-turkey-facing-right:before { content: "\f106"; }

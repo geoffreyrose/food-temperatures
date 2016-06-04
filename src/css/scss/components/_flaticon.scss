@@ -36,16 +36,122 @@
 		font-smoothing: antialiased;
 	}
 
-	.fi-chicken:before { content: "\f100"; }
-	.fi-cow:before { content: "\f101"; }
-	.fi-fish:before { content: "\f102"; }
-	.fi-pig:before { content: "\f103"; }
-	.fi-lamb:before { content: "\f104"; }
-	.fi-turkey:before { content: "\f105"; }
-	
-	$font-Flaticon-chicken-looking-right: "\f100";
-	$font-Flaticon-cow-silhouette: "\f101";
-	$font-Flaticon-draw: "\f102";
-	$font-Flaticon-pig-with-round-tail: "\f103";
-	$font-Flaticon-sheep-with-wool: "\f104";
-	$font-Flaticon-turkey-facing-right: "\f105";
+	.fi-chicken {
+		&:before { 
+			content: "\f100";
+		}
+
+		&.colorful {
+			color: $food-chicken;
+
+			&.food-label {
+				color: #fff;
+				border-color: $food-chicken;
+				box-shadow: 0 0 20px $food-chicken;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	.fi-cow {
+		&:before { 
+			content: "\f101";
+		}
+
+		&.colorful {
+			color: $food-cow;
+
+			&.food-label {
+				color: #fff;
+				border-color: $food-cow;
+				box-shadow: 0 0 20px $food-cow;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	.fi-fish {
+		&:before { 
+			content: "\f102";
+		}
+
+		&.colorful {
+			color: $food-fish;
+
+			&.food-label {
+				color: #fff;
+				border-color: $food-fish;
+				box-shadow: 0 0 20px $food-fish;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	.fi-pig {
+		&:before { 
+			content: "\f103";
+		}
+
+		&.colorful {
+			color: $food-pig;
+
+			&.food-label {
+				color: #fff;
+				border-color: $food-pig;
+				box-shadow: 0 0 20px $food-pig;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	.fi-lamb {
+		&:before { 
+			content: "\f104";
+		}
+
+		&.colorful {
+			color: $food-lamb;
+
+			&.food-label {
+				color: #fff;
+				border-color: $food-lamb;
+				box-shadow: 0 0 20px $food-lamb;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	.fi-turkey {
+		&:before { 
+			content: "\f106";
+		}
+
+		&.colorful {
+			color: $food-turkey;
+
+			&.food-label {
+				color: #fff;
+				border-color: $food-turkey;
+				box-shadow: 0 0 20px $food-turkey;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	.fi-thermometer {
+		&:before { 
+			content: "\f105";
+		}
+	}

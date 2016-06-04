@@ -1,10 +1,9 @@
 nav {
 	margin: 0;
-	padding: 0;
 
 	ul {
 		margin: 0;
-		padding: 0;
+		padding: 0.25rem;
 		width: 100%;
 
 		
@@ -13,21 +12,31 @@ nav {
 	li {
 		display: block;
 		float: left;
+		padding: .25rem;
 		width: 50%;
 
 		
 	}
 
 	a {
-		border: 1px solid $off-black;
+		background: $white;
+		border: 1px solid $gray-color-shade;
+		//border-radius: $global-radius;
+		box-shadow: 0 3px 5px $gray-color-shade;
 		text-align: center;
 		text-decoration: none;
+
+		&:focus {
+			outline: none;
+		}
 	}
 
 	.food-label {
 		color: $black;
 		font-weight: bold;
 		margin-bottom: 1rem;
+
+		@include heading-font-bold();
 	}
 
 	.food-icon {

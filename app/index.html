@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" class="no-js">
+<html lang="en" id="foodApp" ng-app="myApp" class="no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,8 +15,8 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/iestyles.css" />
 	<![endif]-->
 </head>
-<body>
-	<main ng-controller="pageToggleCtrl">
+<body ng-controller="pageToggleCtrl" ng-class="{ 'page-open' : showPage, 'page-closed' : !showPage }">
+	<main>
 		<nav>
 			<ul>
 				<li>
@@ -56,24 +56,30 @@
 					</a>
 				</li>
 			</ul>
+			<footer class="footer-heading">
+				<h3>What Are You Cooking?</h3>
+			</footer>
 		</nav>
-		<footer class="footer-heading">
-			<h3>What Are You Cooking?</h3>
-		</footer>
-		<div ng-class="{ 'page-open' : showPage, 'page-closed' : !showPage }" class="page-content">
+		<div  class="page-content">
 			<div ui-view></div>
 		</div>
 	</main>
 
 	
-	<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script> -->
-	
-	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
+	<!-- <script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script> -->
 
 	<script src="app.js"></script>
 	<script src="states.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+	<script>
+
+		if (window.navigator.standalone == true) {
+ 			document.getElementById("foodApp").className = "ios-web-app";
+		}
+	</script>
 </body>
 </html>

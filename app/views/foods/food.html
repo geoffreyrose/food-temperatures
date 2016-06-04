@@ -1,9 +1,8 @@
-<header class="food-header">
-	<h3>{{ food.label }}</h3>	
-</header>
-
 <div class="food-content">
-	<span class="food-icon"><i class="{{ food.icon }}"></i></span>
+	<span class="food-icon">
+		<i class="{{ food.icon }} colorful"></i>
+		<h3 class="food-label {{ food.icon }} colorful">{{ food.label }}</h3>
+	</span>
 	<div class="food-states">
 		<div class="food-state" ng-repeat="state in food.states">
 			<div class="food-state-label">
@@ -11,10 +10,10 @@
 			</div>
 			<div class="food-state-temperatures" ng-repeat="temperature in state.temperatures">
 				<div ng-class="{ 'hide' : temperatureType, 'show' : !temperatureType}">
-					{{ temperature.fahrenheit }}
+					{{ temperature.fahrenheit }} <i class="thermometer fi fi-thermometer"></i>
 				</div>
 				<div ng-class="{ 'show' : temperatureType, 'hide' : !temperatureType}">
-					{{ temperature.celsius }}
+					{{ temperature.celsius }} <i class="thermometer fi fi-thermometer"></i>
 				</div>
 			</div>
 		</div>
@@ -22,10 +21,10 @@
 </div>
 
 <footer class="food-footer">
-	<a class="back-button" ng-click="showPageToggle()">
+	<a class="back-button show-for-small-only" ng-click="showPageToggle()">
 		<i class="fa fa-arrow-left" aria-hidden="true"></i>
 	</a>
-	<h3 class="text-center">Temperature</h3>
+	<h3 class="text-center">&nbsp;</h3>
 	<div class="switch">
 		<input ng-if="!temperatureType" checked id="namehere" type="checkbox" name="namehere" />
 		<input ng-if="temperatureType" id="namehere" type="checkbox" name="namehere" />

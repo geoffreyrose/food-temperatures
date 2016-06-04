@@ -8,10 +8,10 @@
 //Foundation 
 @import 'foundation/settings';
 @include foundation-global-styles;
-@include foundation-grid;
+//@include foundation-grid;
 @include foundation-visibility-classes;
-@include foundation-float-classes;
-@include foundation-form-error;
+//@include foundation-float-classes;
+//@include foundation-form-error;
 
 @import 'components/typography';
 @import 'components/basic-layout';
