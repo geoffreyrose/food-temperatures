@@ -1,5 +1,6 @@
 myApp.config(function($locationProvider, $urlRouterProvider, $stateProvider) {
 	
+
 	$locationProvider.hashPrefix('!');
 	$urlRouterProvider.otherwise("/");
 	
@@ -58,6 +59,15 @@ myApp.config(function($locationProvider, $urlRouterProvider, $stateProvider) {
 								celsius: '71.1\260'
 							}
 						]
+					},
+					{
+						label: 'Ground',
+						temperatures: [
+							{
+								fahrenheit: '160\260',
+								celsius: '71.1\260'
+							}
+						]
 					}
 				]
 			}
@@ -74,7 +84,7 @@ myApp.config(function($locationProvider, $urlRouterProvider, $stateProvider) {
 				icon: 'fi fi-pig',
 				states: [
 					{
-						label: 'Cook To',
+						label: 'Medium Rare',
 						temperatures: [
 							{
 								fahrenheit: '145\260',
@@ -82,7 +92,35 @@ myApp.config(function($locationProvider, $urlRouterProvider, $stateProvider) {
 							}
 						]
 					},
+					{
+						label: 'Medium',
+						temperatures: [
+							{
+								fahrenheit: '150\260',
+								celsius: '65.5\260'
+							}
+						]
+					},
+					{
+						label: 'Well Done',
+						temperatures: [
+							{
+								fahrenheit: '160\260',
+								celsius: '71.1.8\260'
+							}
+						]
+					},
+					{
+						label: 'Ground',
+						temperatures: [
+							{
+								fahrenheit: '160\260',
+								celsius: '71.1.8\260'
+							}
+						]
+					},
 				]
+
 			}
 		})
 

@@ -1,3 +1,7 @@
+* {
+	@extend %noselect;
+}
+
 body {
 	&.page-open {
 		.page-content {
@@ -195,10 +199,10 @@ html, body {
 		border-style: solid;
 		border-radius: 50px;
 		color: $white;	
-		font-size: 3rem;
-		line-height: 3rem;
-		margin: 1rem 0 0;
-		padding: 1.5rem 4rem;
+		font-size: 2rem;
+		line-height: 2rem;
+		margin: 2rem 0 0;
+		padding: 1rem 3rem;
 		text-align: center;
 		width: auto;
 	}
@@ -264,9 +268,7 @@ html, body {
 	margin: .25rem .5rem;
 }
 .food-state {
-	background: $white;
-	border: 1px solid $gray-color-shade;
-	box-shadow: 0 3px 5px $gray-color-shade;
+	@extend %box-tile;
 	float: left;
 	margin: .25rem 0;
 	padding: .5rem;
@@ -307,4 +309,9 @@ html, body {
 			}
 		}
 	}
+}
+
+.home-title {
+	color: $white;
+	margin: 0;
 }
