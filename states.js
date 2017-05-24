@@ -1,9 +1,9 @@
 myApp.config(function($locationProvider, $urlRouterProvider, $stateProvider) {
-	
+
 
 	$locationProvider.hashPrefix('!');
 	$urlRouterProvider.otherwise("/");
-	
+
 	$stateProvider
 		.state('beef', {
 			url: "/beef",
@@ -106,7 +106,7 @@ myApp.config(function($locationProvider, $urlRouterProvider, $stateProvider) {
 						temperatures: [
 							{
 								fahrenheit: '160\260',
-								celsius: '71.1.8\260'
+								celsius: '71.8\260'
 							}
 						]
 					},
@@ -115,7 +115,7 @@ myApp.config(function($locationProvider, $urlRouterProvider, $stateProvider) {
 						temperatures: [
 							{
 								fahrenheit: '160\260',
-								celsius: '71.1.8\260'
+								celsius: '71.8\260'
 							}
 						]
 					},
