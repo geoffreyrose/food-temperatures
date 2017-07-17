@@ -1,6 +1,6 @@
-var myApp = angular.module('myApp', ['ui.router']);
+var myApp = angular.module('myApp', ['ui.router'])
 
-myApp.controller('pageToggleCtrl', function ($scope) {
+.controller('pageToggleCtrl', function ($scope) {
 	$scope.showPage = false;
 	$scope.showPageToggle = function() {
 	  $scope.showPage = !$scope.showPage;
@@ -8,6 +8,11 @@ myApp.controller('pageToggleCtrl', function ($scope) {
 
 	$scope.temperatureType = false;
 	$scope.temperatureTypeToggle = function() {
-	  $scope.temperatureType = !$scope.temperatureType;
-	}   
+	 	$scope.temperatureType = !$scope.temperatureType;
+	}
+})
+
+.controller('foodCtrl', function($scope, $state, foodData){
+	$scope.food = $state.current.data
+	$scope.doneLevels = foodData.data;
 });

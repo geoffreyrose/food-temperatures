@@ -4,11 +4,11 @@
 		<h3 class="food-label {{ food.icon }} colorful">{{ food.label }}</h3>
 	</span>
 	<div class="food-states">
-		<div class="food-state" ng-repeat="state in food.states">
+		<div class="food-state" ng-repeat="doneLevel in doneLevels">
 			<div class="food-state-label">
-				{{ state.label }}
+				{{ doneLevel.label }}
 			</div>
-			<div class="food-state-temperatures" ng-repeat="temperature in state.temperatures">
+			<div class="food-state-temperatures" ng-repeat="temperature in doneLevel.temperatures">
 				<div ng-class="{ 'hide' : temperatureType, 'show' : !temperatureType}">
 					{{ temperature.fahrenheit }} <i class="thermometer fi fi-thermometer"></i>
 				</div>

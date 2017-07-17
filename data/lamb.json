@@ -1,0 +1,38 @@
+[
+    {
+        "label": "Rare",
+        "temperatures": [
+            {
+                "fahrenheit": "135\u00B0",
+                "celsius": "57.2\u00B0"
+            }
+        ]
+    },
+    {
+        "label": "Medium Rare",
+        "temperatures": [
+            {
+                "fahrenheit": "140\u00B0 \u2013 150\u00B0",
+                "celsius": "60\u00B0 - 65.5\u00B0"
+            }
+        ]
+    },
+    {
+        "label": "Medium",
+        "temperatures": [
+            {
+                "fahrenheit": "160\u00B0",
+                "celsius": "71.1\u00B0"
+            }
+        ]
+    },
+    {
+        "label": "Well Done",
+        "temperatures": [
+            {
+                "fahrenheit": "165\u00B0",
+                "celsius": "73.9\u00B0"
+            }
+        ]
+    }
+]
