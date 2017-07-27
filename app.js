@@ -1,18 +1,27 @@
-var myApp = angular.module('myApp', ['ui.router'])
+(function(){
+	angular.module('myApp', ['ui.router']);
 
-.controller('pageToggleCtrl', function ($scope) {
-	$scope.showPage = false;
-	$scope.showPageToggle = function() {
-	  $scope.showPage = !$scope.showPage;
+	angular.module('myApp').controller('pageToggleCtrl', pageToggleCtrl);
+	pageToggleCtrl.$inject = ['$scope'];
+
+	function pageToggleCtrl($scope) {
+		$scope.showPage = false;
+		$scope.showPageToggle = function() {
+		  $scope.showPage = !$scope.showPage;
+		}
+
+		$scope.temperatureTypeCelsius = false;
+		$scope.temperatureTypeToggle = function() {
+		 	$scope.temperatureTypeCelsius = !$scope.temperatureTypeCelsius;
+		}
 	}
 
-	$scope.temperatureType = false;
-	$scope.temperatureTypeToggle = function() {
-	 	$scope.temperatureType = !$scope.temperatureType;
-	}
-})
+	angular.module('myApp').controller('foodCtrl', foodCtrl);
+	foodCtrl.$inject = ['$scope', '$state', 'foodData'];
 
-.controller('foodCtrl', function($scope, $state, foodData){
-	$scope.food = $state.current.data
-	$scope.doneLevels = foodData.data;
-});
+	function foodCtrl($scope, $state, foodData){
+		$scope.food = $state.current.data
+		$scope.doneLevels = foodData.data;
+	}
+
+})();

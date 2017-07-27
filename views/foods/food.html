@@ -1,19 +1,17 @@
 <div class="food-content">
 	<span class="food-icon">
 		<i class="{{ food.icon }} colorful"></i>
-		<h3 class="food-label {{ food.icon }} colorful">{{ food.label }}</h3>
+		<h3 class="food-label {{ food.icon }} colorful" ng-bind="food.label"></h3>
 	</span>
 	<div class="food-states">
 		<div class="food-state" ng-repeat="doneLevel in doneLevels">
-			<div class="food-state-label">
-				{{ doneLevel.label }}
-			</div>
+			<div class="food-state-label" ng-bind="doneLevel.label"></div>
 			<div class="food-state-temperatures" ng-repeat="temperature in doneLevel.temperatures">
-				<div ng-class="{ 'hide' : temperatureType, 'show' : !temperatureType}">
-					{{ temperature.fahrenheit }} <i class="thermometer fi fi-thermometer"></i>
+				<div ng-class="{ 'hide' : temperatureTypeCelsius, 'show' : !temperatureTypeCelsius}" ng-bind="temperature.fahrenheit">
+					<i class="thermometer fi fi-thermometer"></i>
 				</div>
-				<div ng-class="{ 'show' : temperatureType, 'hide' : !temperatureType}">
-					{{ temperature.celsius }} <i class="thermometer fi fi-thermometer"></i>
+				<div ng-class="{ 'show' : temperatureTypeCelsius, 'hide' : !temperatureTypeCelsius}" ng-bind="temperature.celsius">
+					<i class="thermometer fi fi-thermometer"></i>
 				</div>
 			</div>
 		</div>
@@ -25,8 +23,8 @@
 	</a>
 	<h3 class="text-center">&nbsp;</h3>
 	<div class="switch">
-		<input ng-if="!temperatureType" checked id="namehere" type="checkbox" name="namehere" />
-		<input ng-if="temperatureType" id="namehere" type="checkbox" name="namehere" />
-		<span class="right">&#176;F</span><label ng-click="temperatureTypeToggle()" for="namehere"></label><span class="left">&#176;C</span>
+		<input ng-if="!temperatureTypeCelsius" checked id="temperatureToggle" type="checkbox">
+		<input ng-if="temperatureTypeCelsius" id="temperatureToggle" type="checkbox">
+		<span class="right">&#176;F</span><label ng-click="temperatureTypeToggle()" for="temperatureToggle"></label><span class="left">&#176;C</span>
 	</div>
 </footer>
