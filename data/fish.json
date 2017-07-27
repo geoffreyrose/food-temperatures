@@ -1,0 +1,11 @@
+[
+    {
+        "label": "Cook To",
+        "temperatures": [
+            {
+                "fahrenheit": "145\u00B0",
+                "celsius": "62.8\u00B0"
+            }
+        ]
+    }
+]

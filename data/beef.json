@@ -1,0 +1,56 @@
+[
+    {
+        "label": "Rare",
+        "temperatures": [
+            {
+                "fahrenheit":"120\u00B0 \u2013 125\u00B0",
+                "celsius": "48.9\u00B0- 51.6\u00B0"
+            }
+        ]
+    },
+    {
+        "label": "Medium Rare",
+        "temperatures": [
+            {
+                "fahrenheit": "130\u00B0 \u2013 135\u00B0",
+                "celsius": "54.4\u00B0 - 57.2\u00B0"
+            }
+        ]
+    },
+    {
+        "label": "Medium",
+        "temperatures": [
+            {
+                "fahrenheit": "140\u00B0 \u2013 145\u00B0",
+                "celsius": "60.0\u00B0 - 62.8\u00B0"
+            }
+        ]
+    },
+    {
+        "label": "Medium Well",
+        "temperatures": [
+            {
+                "fahrenheit": "150\u00B0 \u2013 155\u00B0",
+                "celsius": "65.5\u00B0 - 68.3\u00B0"
+            }
+        ]
+    },
+    {
+        "label": "Well Done",
+        "temperatures": [
+            {
+                "fahrenheit": "160\u00B0",
+                "celsius": "71.1\u00B0"
+            }
+        ]
+    },
+    {
+        "label": "Ground",
+        "temperatures": [
+            {
+                "fahrenheit": "160\u00B0",
+                "celsius": "71.1\u00B0"
+            }
+        ]
+    }
+]
